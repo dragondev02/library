@@ -1,0 +1,225 @@
+/* Removing base 8px body margin */
+html, body{
+    margin: 0;
+}
+
+/* Container that wraps all the relevant html elements */
+.container {
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: 1fr 15fr 1fr;
+}
+
+/* Aligning header title and icon next to each other using flexbox */
+.header{
+    display: flex;
+
+    background-color: #353533;
+    color: #F8E5C5;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5rem;
+    font-family: 'Lobster', cursive;
+}
+
+.header > img{
+    height: 6rem;
+}
+
+/* Defining hidden property */
+.hidden {
+    display: none;
+}
+
+/* Container that holds the elements of the books array */
+.bookShelf{
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+    /* Cards that hold a book each */
+    .book{
+        background-color: rgb(253, 250, 246);
+        border: 1px solid gray;
+        border-radius: 20px;
+
+        width: 17rem;
+        height: 20rem;
+        margin: 3rem 2rem;
+
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .book > h1{
+        margin: 0rem 0.5rem;
+        font-family: 'Amatic SC', cursive;
+        font-size: 1.7rem;
+    
+        text-align: center;
+    }
+
+    .book > h3{
+        margin-top: 0;
+        margin-bottom: 0;
+
+        font-family: 'Amatic SC', cursive;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .book > p{
+        margin-top: 0;
+        margin-bottom: 0;
+
+        color: lightslategray;
+        font-family: 'Amatic SC', cursive;
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+
+    .book > h4{
+        font-family: 'Amatic SC', cursive;
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+    }
+
+    .book > button{
+        letter-spacing: 0.1rem;
+        font-family: 'Amatic SC', cursive;
+        font-weight: 700;
+        font-size: 1.4rem;
+
+        background-color: rgb(255, 214, 206);
+    }
+
+
+/* Styling the form element used to add a new book */
+.submitFormContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitForm > form{
+    display: flex;
+    height: 100%;
+
+    border: 1px solid gray;
+    padding: 1.5rem 3.5rem;
+    background-color: rgb(252, 249, 246);
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.submitForm > form > label{
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 1.6rem;
+
+    padding: 0.5rem;
+}
+
+.submitForm > form > input[type=text], .submitForm > form > input[type=number]{
+    padding: 0.4rem 0.5rem;
+
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.radioButtons{
+    margin-bottom: 1.2rem;
+}
+
+.radioButtons > input{
+    font-family: 'Amatic SC', cursive;
+}
+
+.submitButton > button{
+    letter-spacing: 0.1rem;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 1.6rem;
+
+    background-color: rgb(241, 241, 241);
+    border: 1px solid gray;
+}
+
+
+/* Centering and styling the new book button located on the bottom of the page */
+.newBook{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.newBook > button{
+    padding: 0.3rem;
+
+    letter-spacing: 0.1rem;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 1.6rem;
+
+    background-color: rgb(253, 250, 246);
+}
+
+
+/* Footer which displays my information */
+.footer{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: #353533;
+    color: rgb(202, 201, 201);
+}
+
+#myIcon{
+    height: 2rem;
+    padding: 0rem 0.5rem;
+}
+
+
+
+/* Read icons customization */
+.positive{
+    margin-bottom: 0.5rem;
+    color: green;
+    font-size: 2rem;
+}
+
+.negative{
+    margin-bottom: 0.5rem;
+    color: rgb(253, 114, 0);
+    font-size: 2rem;
+}
+
+.material-icons:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* Mobile media query */
+@media only screen and (max-width: 600px) {
+
+}
+  
