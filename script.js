@@ -39,8 +39,11 @@ function displayBooks(){
             bookPages.textContent = myBooks[i].pages + " pages long";
 
             // The read status changes based on it's value //
-            let bookRead = document.createElement("h4")
-            bookRead.textContent = "Read:"
+            let bookRead = document.createElement("div");
+            bookRead.classList.add("readContainer");
+            
+            let bookInfo = document.createElement("h4")
+            bookInfo.textContent = "Read:"
 
                 let readStatus = document.createElement("span");
                 readStatus.classList.add("material-icons");
@@ -60,8 +63,10 @@ function displayBooks(){
             removeButton.setAttribute("data-rm", i);
             removeButton.textContent = "Remove";
 
+            bookRead.append(bookInfo, readStatus);
+
         // The sub-values are appended to the book element, which is then appended onto the container //
-        book.append(bookTitle, bookAuthor, bookPages, bookRead, readStatus, removeButton);
+        book.append(bookTitle, bookAuthor, bookPages, bookRead, removeButton);
         booksContainer.append(book);
         
     }
